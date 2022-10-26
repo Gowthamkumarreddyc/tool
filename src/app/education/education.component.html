@@ -1,0 +1,42 @@
+<div class="container">
+<div class="buttons" >
+    <div style="margin-right: 5px;">   
+         <button (click)="openDialog()" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+            <mat-icon>add</mat-icon>
+          </button>
+    </div>
+    <div style="margin-right: 5px;">
+        <button [disabled]="buttondisable" mat-icon-button color="accent" (click)="editEducationData(tableRowData)" aria-label="Example icon button with a home icon">
+            <mat-icon>edit</mat-icon>
+          </button>
+    </div>
+    <div>
+        <button [disabled]="buttondisable" mat-icon-button color="warn" (click)="deleteEducation(tableRowData)">
+            <mat-icon >delete</mat-icon>
+          </button>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Select</th>
+            <th scope="col">Type of Establishment</th>
+            <th scope="col">Name of Establishment</th>
+            <th scope="col">Disciplane</th>
+            <th scope="col">Passing Year</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor="let y of educationDet">
+        <td>
+            <input type="radio" value="{{y | json}}" name="radio_education" id="ten" (change)="clickingRadio($event)">
+        </td>
+        <td>{{y.typeOfEstablishment}}</td>
+        <td>{{y.nameOfEstablishment}}</td>
+        <td>{{y.discipline}}</td>
+        <td>{{y.passingYear}}</td>
+       </tr>
+    </tbody>
+</table>
+</div>

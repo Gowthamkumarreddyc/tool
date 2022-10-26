@@ -1,0 +1,70 @@
+    <div class="container">
+        <div class="upper">
+            <div class="u1">
+                <img height="100%" width="100%"
+                    src="../../assets/Steve-Jobs-iPhone-2010.webp"
+                    alt="">
+            </div>
+            <div class="u2">
+                <div class="uu1">
+                    <div class="uuu1">
+                        <div class="name" *ngFor="let x of employee">
+                            <p>{{x.name}}</p>
+                            <p>{{x.id}}</p>
+                            <p>Join in: {{x.date}}</p>
+                        </div>
+                        <div class="address" *ngFor="let x of employee">
+                            <div><i class="fa-solid fa-location-dot"></i> {{x.address}}</div>
+                            <div><i class="fa-solid fa-envelope"></i> {{x.email}}</div>
+                            <div><i class="fa-solid fa-phone"></i> {{x.phone}}</div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="uuu2">
+                        <div class="head">
+                            <p style="padding-right: 10px;">Designation</p>
+                            <p>Team</p>
+                            <p>Reporting Manager</p>
+                        </div>
+                        <div class="foo" *ngFor="let x of employee">
+                            <p>{{x.designation}}</p>
+                            <p>{{x.team}}</p>
+                            <p style="padding-right: 30px;">{{x.reporting}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="uu2">
+                    <div class="u_1">
+                        <div class="icon1" >
+                            <mat-icon>star</mat-icon>
+                        </div>
+                        <div class="icon2">
+                            <mat-icon>star</mat-icon>
+                        </div>
+                    </div>
+                    <div class="u_2">
+                        <div class="icon3">
+                            <mat-icon>star</mat-icon>
+                        </div>
+                        <div class="icon4">
+                            <mat-icon>star</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="middle">
+            <div>
+                <button routerLink="/edu" routerLinkActive="active" mat-raised-button color="primary">Education</button>
+            </div>
+            <div style="margin-left: 15px;">
+                <button routerLink="/exp" routerLinkActive="active" mat-raised-button color="primary">Experience</button>
+            </div>
+        </div>
+        <div class="lower">    
+            <router-outlet></router-outlet> 
+        </div>
+    </div>
+
+              

@@ -1,0 +1,155 @@
+<section class="experience">
+  <form [formGroup]="addExpForm">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+
+          <div>
+            <fieldset>
+              <label for="Cname" style="margin-left:15px ;">Company Name</label>
+              <textarea id="Cname" formControlName="companyName"
+                style="width: 300px; margin: 10px; padding: 5px; height: 40px;"></textarea>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="Address" style="margin-left:15px ;">Address</label>
+              <textarea id="Address" formControlName="address"
+                style="width: 300px; margin: 10px; padding: 5px; "></textarea>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="FromDate" style="margin-left:15px ;">From Date</label>
+              <input type="date" formControlName="fromDate" id="FromDate"
+                style="width: 300px; margin: 10px; padding: 5px;" required>
+
+            </fieldset>
+          </div>
+
+          <div>
+            <label for="ToDate" style="margin-left:15px ;">To Date</label>
+            <fieldset>
+              <input type="date" formControlName="toDate" style="width: 300px; margin: 10px ;padding: 5px;"
+                id="ToDate" />
+            </fieldset>
+          </div>
+
+          <div>
+            <label for="JobTitle" style="margin-left:15px ;">Job Title</label>
+            <fieldset>
+              <textarea id="JobTitle" formControlName="jobTitle"
+                style="width: 300px; margin: 10px; padding: 5px; height: 40px; "></textarea>
+            </fieldset>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset>
+                <label for="Salary" >Salary On leaving</label>
+                <input type="text" formControlName="salaryOnLeaving" id="Salary"
+                   required>
+  
+              </fieldset>
+            </div>
+
+            <div class="col-md-6">
+              <fieldset>
+                <label for="Curency" >Currency</label>
+                <select id="Currency" formControlName="currency" >
+                  <option value="INR">INR</option>
+                  <option value="Dollar">Dollar</option>
+                  <option value="Pound">Pound</option>
+                </select>
+              </fieldset>
+            </div>
+        </div>
+
+         
+        </div>
+
+        <div class="col-md-4">
+          <div>
+            <fieldset>
+              <label for="DOL" style="margin-left:15px ;">Designation on leaving</label>
+              <textarea id="DOL" formControlName="designationOnLeave"
+                style="width: 300px; margin: 10px; padding: 5px; height: 40px;"></textarea>
+            </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <label for="IndustryType" style="margin-left:15px ;">Industry Type</label>
+              <select id="IndustryType" formControlName="industryType"
+                style="width: 300px; margin: 10px; padding: 5px;">
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+                <option value="Services">Services</option>
+              </select>
+            </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <label for="Number" style="margin-left:15px ;">Contact Number</label>
+              <input type="text" formControlName="contactNumber" id="Number"
+                style="width: 300px; margin: 10px; padding: 5px;" required>
+            </fieldset>
+          </div>
+          <div>
+            <label for="Number" style="margin-left:15px ;">Roles</label>
+            <fieldset>
+              <input type="text" formControlName="roles" style="width: 300px; margin: 10px; padding: 5px;" id="Number"
+                required>
+            </fieldset>
+          </div>
+          <div>
+            <label for="KeyExperince" style="margin-left:10px  ;">Key Experince</label>
+            <fieldset>
+              <textarea id="KeyExperince" formControlName="keyExperience"
+                style="width: 300px; margin-left:15px  ;padding: 5px;margin: 10px; height: 40px; "></textarea>
+            </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <label for="Reason" style="margin-left:10px;">Reason for leaving</label>
+              <textarea id="Reason" formControlName="reasonForLeaving"
+                style="width: 300px; margin: 10px;  "></textarea>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div>
+            <fieldset>
+              <label for="Address" >experience Certificate</label>
+              <input type="file" formControlName="experienceCertificate"
+                style="width: 200px; margin: 10px; padding: 5px;" />
+            </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <label for="salaryslip" >Salary Slip</label>
+              <input type="file" formControlName="salarySlip"
+                style="width: 250px; margin: 10px;  padding: 5px;" />
+            </fieldset>
+          </div>
+          <div>
+            <fieldset>
+              <label for="ReileveingLetter" >Reileveing Letter</label>
+              <input type="file" formControlName="relievingLetter"
+                style="width: 250px; margin: 10px;  padding: 5px;" />
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+<mat-dialog-actions align="end">
+  <!-- <button mat-button mat-dialog-close style="margin-right: 20px;">Cancel</button>
+  <button mat-button color="primary" (click)="postAndUpdateExperienceDetails()">{{actionButton}}</button> -->
+
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)=" postAndUpdateExperienceDetails()">{{actionButton}}</button>
+</mat-dialog-actions>
