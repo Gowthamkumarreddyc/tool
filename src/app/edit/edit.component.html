@@ -1,86 +1,108 @@
 <section class="experience">
   <form [formGroup]="addExpForm">
     <div class="container">
+      <h1 style="color: blue;">Experience Form</h1>
       <div class="row">
         <div class="col-md-4">
 
           <div>
             <fieldset>
-              <label for="Cname" style="margin-left:15px ;">Company Name</label>
+              <label for="Cname" style="margin-left:15px ;">Company Name <span>*</span></label>
               <textarea id="Cname" formControlName="companyName"
                 style="width: 300px; margin: 10px; padding: 5px; height: 40px;"></textarea>
             </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['companyName'].touched ) && registerFormControl['companyName'].errors?.['required']">
+            Required
+            </span>
           </div>
 
           <div>
             <fieldset>
-              <label for="Address" style="margin-left:15px ;">Address</label>
+              <label for="Address" style="margin-left:15px ;">Address <span>*</span></label>
               <textarea id="Address" formControlName="address"
                 style="width: 300px; margin: 10px; padding: 5px; "></textarea>
             </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['address'].touched ) && registerFormControl['address'].errors?.['required']">
+              Required
+            </span>
           </div>
 
           <div>
             <fieldset>
-              <label for="FromDate" style="margin-left:15px ;">From Date</label>
+              <label for="FromDate" style="margin-left:15px ;">From Date <span>*</span></label>
               <input type="date" formControlName="fromDate" id="FromDate"
-                style="width: 300px; margin: 10px; padding: 5px;" required>
-
+                style="width: 300px; margin: 10px; padding: 5px;" >
             </fieldset>
+            <span class="text-danger"
+            *ngIf="(registerFormControl['fromDate'].touched ) && registerFormControl['fromDate'].errors?.['required']">
+            Required
+          </span>
           </div>
 
           <div>
-            <label for="ToDate" style="margin-left:15px ;">To Date</label>
+            <label for="ToDate" style="margin-left:15px ;">To Date <span>*</span></label>
             <fieldset>
               <input type="date" formControlName="toDate" style="width: 300px; margin: 10px ;padding: 5px;"
                 id="ToDate" />
             </fieldset>
+            <span class="text-danger"
+            *ngIf="(registerFormControl['toDate'].touched ) && registerFormControl['toDate'].errors?.['required']">
+            Required
+          </span>
           </div>
 
           <div>
-            <label for="JobTitle" style="margin-left:15px ;">Job Title</label>
+            <label for="JobTitle" style="margin-left:15px ;">Job Title <span>*</span></label>
             <fieldset>
               <textarea id="JobTitle" formControlName="jobTitle"
                 style="width: 300px; margin: 10px; padding: 5px; height: 40px; "></textarea>
             </fieldset>
+            <span class="text-danger"
+            *ngIf="(registerFormControl['jobTitle'].touched ) && registerFormControl['jobTitle'].errors?.['required']">
+            Required
+          </span>
           </div>
 
-          <div class="row">
+          <div class="row" style="margin-left:5px ;">
             <div class="col-md-6">
               <fieldset>
-                <label for="Salary" >Salary On leaving</label>
-                <input type="text" formControlName="salaryOnLeaving" id="Salary"
-                   required>
-  
+                <label for="Salary" style="width: 50%;">Salary On leaving <span>*</span></label>
+                <input type="text" style="width: 50%;" formControlName="salaryOnLeaving" id="Salary" >
               </fieldset>
+              <span class="text-danger"
+            *ngIf="(registerFormControl['salaryOnLeaving'].touched ) && registerFormControl['salaryOnLeaving'].errors?.['required']">
+            Required
+          </span>
             </div>
 
             <div class="col-md-6">
               <fieldset>
-                <label for="Curency" >Currency</label>
-                <select id="Currency" formControlName="currency" >
+                <label for="Curency" style="width: 50% ; margin-top: 15px;">Currency </label>
+                <select id="Currency" formControlName="currency" style="width: 50%; height: 30px;">
                   <option value="INR">INR</option>
                   <option value="Dollar">Dollar</option>
                   <option value="Pound">Pound</option>
                 </select>
               </fieldset>
             </div>
-        </div>
+          </div>
 
-         
+
         </div>
 
         <div class="col-md-4">
           <div>
             <fieldset>
-              <label for="DOL" style="margin-left:15px ;">Designation on leaving</label>
+              <label for="DOL" style="margin-left:15px ;">Designation on leaving </label>
               <textarea id="DOL" formControlName="designationOnLeave"
                 style="width: 300px; margin: 10px; padding: 5px; height: 40px;"></textarea>
             </fieldset>
           </div>
           <div>
             <fieldset>
-              <label for="IndustryType" style="margin-left:15px ;">Industry Type</label>
+              <label for="IndustryType" style="margin-left:15px ;">Industry Type </label>
               <select id="IndustryType" formControlName="industryType"
                 style="width: 300px; margin: 10px; padding: 5px;">
                 <option value="IT">IT</option>
@@ -91,20 +113,24 @@
           </div>
           <div>
             <fieldset>
-              <label for="Number" style="margin-left:15px ;">Contact Number</label>
-              <input type="text" formControlName="contactNumber" id="Number"
-                style="width: 300px; margin: 10px; padding: 5px;" required>
+              <label for="Number" style="margin-left:15px ;">Contact Number </label>
+              <input type="te" formControlName="contactNumber" id="Number"
+                style="width: 300px; margin: 10px; padding: 5px;" >
             </fieldset>
           </div>
           <div>
-            <label for="Number" style="margin-left:15px ;">Roles</label>
+            <label for="Number" style="margin-left:15px ;">Roles <span>*</span></label>
             <fieldset>
               <input type="text" formControlName="roles" style="width: 300px; margin: 10px; padding: 5px;" id="Number"
-                required>
+                >
             </fieldset>
+            <span class="text-danger"
+            *ngIf="(registerFormControl['roles'].touched ) && registerFormControl['roles'].errors?.['required']">
+            Required
+          </span>
           </div>
           <div>
-            <label for="KeyExperince" style="margin-left:10px  ;">Key Experince</label>
+            <label for="KeyExperince" style="margin-left:10px  ;">Key Experince </label>
             <fieldset>
               <textarea id="KeyExperince" formControlName="keyExperience"
                 style="width: 300px; margin-left:15px  ;padding: 5px;margin: 10px; height: 40px; "></textarea>
@@ -112,44 +138,43 @@
           </div>
           <div>
             <fieldset>
-              <label for="Reason" style="margin-left:10px;">Reason for leaving</label>
-              <textarea id="Reason" formControlName="reasonForLeaving"
-                style="width: 300px; margin: 10px;  "></textarea>
+              <label for="Reason" style="margin-left:10px;">Reason for leaving <span>*</span></label>
+              <textarea id="Reason" formControlName="reasonForLeaving" style="width: 300px; margin: 10px;  "></textarea>
             </fieldset>
+            <span class="text-danger"
+            *ngIf="(registerFormControl['reasonForLeaving'].touched ) && registerFormControl['reasonForLeaving'].errors?.['required']">
+             Required
+          </span>
           </div>
         </div>
 
         <div class="col-md-4">
           <div>
             <fieldset>
-              <label for="Address" >experience Certificate</label>
+              <label for="Address" style="margin-left: 15px;">Experience Certificate</label>
               <input type="file" formControlName="experienceCertificate"
                 style="width: 200px; margin: 10px; padding: 5px;" />
             </fieldset>
           </div>
           <div>
             <fieldset>
-              <label for="salaryslip" >Salary Slip</label>
-              <input type="file" formControlName="salarySlip"
-                style="width: 250px; margin: 10px;  padding: 5px;" />
+              <label for="salaryslip" style="margin-left: 15px;">Salary Slip</label>
+              <input type="file" formControlName="salarySlip" style="width: 250px; margin: 10px;  padding: 5px;" />
             </fieldset>
           </div>
           <div>
             <fieldset>
-              <label for="ReileveingLetter" >Reileveing Letter</label>
-              <input type="file" formControlName="relievingLetter"
-                style="width: 250px; margin: 10px;  padding: 5px;" />
+              <label for="ReileveingLetter" style="margin-left: 15px;">Reileveing Letter</label>
+              <input type="file" formControlName="relievingLetter" style="width: 250px; margin: 10px;  padding: 5px;" />
             </fieldset>
           </div>
         </div>
       </div>
     </div>
   </form>
+  <mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close color="warn">Cancel</button>
+    <button mat-button cdkFocusInitial (click)=" postAndUpdateExperienceDetails()"
+     [disabled]="!addExpForm.valid" color="primary">{{actionButton}}</button>
+  </mat-dialog-actions>
 </section>
-<mat-dialog-actions align="end">
-  <!-- <button mat-button mat-dialog-close style="margin-right: 20px;">Cancel</button>
-  <button mat-button color="primary" (click)="postAndUpdateExperienceDetails()">{{actionButton}}</button> -->
-
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button (click)=" postAndUpdateExperienceDetails()">{{actionButton}}</button>
-</mat-dialog-actions>

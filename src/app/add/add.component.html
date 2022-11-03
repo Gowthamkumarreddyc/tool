@@ -1,216 +1,243 @@
 <section class="education">
+
   <form [formGroup]="addForm">
-    <div class="cotainer">
+    <div class="container">
+      <h1 style="color: blue;">Education Form</h1>
       <div class="row">
-      <div class="col-md-4">
-        <div>
-          <fieldset>
-            <label for="establishment" style="margin-left:15px ; margin-top: 10px;">Type of
-              establishment</label>
-            <select id="establishment" style="width: 300px; margin: 10px;" formControlName="typeOfEstablishment">
-              <option value="State">State</option>
-              <option value="Central">Central</option>
-              <option value="Dist">District</option>
-            </select>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="NameOfestablish" style="margin-left:15px ; ">Name of establishment</label>
-            <select id="NameOfestablish" style="width: 300px; margin: 10px;" formControlName="nameOfEstablishment">
-              <option value="Jawahar Lal Nehru University">JLNU</option>
-              <option value="Hyderabad University">Hyderabad University</option>
-              <option value="Gitam University">Gitam University</option>
-            </select>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="Discipline" style="margin-left:15px ; ">Discipline</label>
-            <select id="Discipline" style="width: 300px; margin: 10px;" formControlName="discipline">
-              <option value="Good">Good</option>
-              <option value="Satisfactory">Satisfactory</option>
-              <option value="Below satisfactory">Below Satisfactory</option>
-            </select>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="breaks" style="margin-left:15px ;">Passing year</label>
-            <input type="text" style="width: 300px; margin: 10px; " formControlName=passingYear />
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="Grade" style="margin-left:15px ; ">Grade</label>
-            <select id="Grade" style="width: 300px; margin: 10px;" formControlName="grade">
-              <option value="O">O</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-            </select>
-          </fieldset>
-        </div>
-
-
-        <div>
-          <fieldset>
-            <label for="Level" style="margin-left:15px ; ">Level</label>
-            <select id="Level" style="width: 300px; margin: 10px;" formControlName="level">
-              <option value="I">I</option>
-              <option value="II">II</option>
-              <option value="III">III</option>
-              <option value="IV">IV</option>
-            </select>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="subject" style="margin-left:15px ;">subject</label>
-            <select id="Level" style="width: 300px; margin: 10px;" formControlName="subject">
-              <option value="Computer Science">Computer Science</option>
-              <option value="Web Development">Data Science</option>
-              <option value="Python">Data Structures</option>
-              <option value="Thermodynamics">Thermodynamics</option>
-            </select>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div>
-          <fieldset>
-            <label for="majorField" style="margin-left:15px ; margin-top: 10px;">major field</label>
-            <select id="majorField" style="width: 300px; margin: 10px;" formControlName="majorField">
-              <option value="Btech">Btech</option>
-              <option value="Bcom">Bcom</option>
-              <option value="BSc">BSc</option>
-            </select>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="minorField" style="margin-left:15px;">minor field</label>
-            <select id="minorField" style="width: 300px; margin: 10px;" formControlName="minorField">
-              <option value="CSE">CSE</option>
-              <option value="EEE">EEE</option>
-              <option value="MECH">MECH</option>
-              <option value="ECE">ECE</option>
-              <option value="CIVIL">CIVIL</option>
-            </select>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="AffiliatedTo" style="margin-left:15px ; ">Affiliated To</label>
-            <select id="AffiliatedTo" style="width: 300px; margin: 10px;" formControlName="affiliation">
-              <option value="AICTE">AICTE</option>
-              <option value="JLNU">JLNU</option>
-              <option value="HU">HU</option>
-              <option value="KU">KU</option>
-              <option value="MGNU">MGNU</option>
-            </select>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="Address" style="margin-left:15px ; ">Address of Institution</label>
-            <textarea id="Address" style="width: 300px; margin: 10px; min-height:10px;"
-              formControlName="addressOfInstitution"></textarea>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="AttendedFrom" style="margin-left:15px ; ">Attended From</label>
-            <input type="date" id="nameField" style="width: 300px; margin: 10px;" formControlName="attendedFrom"
-              required>
-
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="AttendedTo" style="margin-left:15px ; ">Attended To</label>
-            <input type="date" id="AttendedTo" style="width: 300px; margin: 10px;" required
-              formControlName="attendedTo">
-
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="sponsor" style="margin-left:15px ; ">company sponsered</label>
-            <select id="sponsor" style="width: 300px; margin: 10px;" formControlName="companySponsored">
-              <option value="Wissen Technology">Wissen Technology</option>
-              <option value="Wissen Infotech">Wissen Infotech</option>
-              <option value="Capgemini">Capgemini</option>
-            </select>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div >
-          <div class="col-md-2">
+        <div class="col-md-4">
+          <div>
             <fieldset>
-              <label for="nameField" style="margin-left:15px ; margin-top: 10px;">Amount</label>
-              <input type="text" formControlName="amount" id="nameField" style="width: 200px; margin: 10px; " required>
+              <label for="establishment" style="margin-left:15px ; margin-top: 10px;">Type of
+                establishment <span>*</span></label>
+              <select id="establishment" name="typeOfEstablishment" style="width: 300px; margin: 10px;"
+                formControlName="typeOfEstablishment">
+                <option value="State">State</option>
+                <option value="Central">Central</option>
+                <option value="Dist">District</option>
+              </select>
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['typeOfEstablishment'].touched ) && registerFormControl['typeOfEstablishment'].errors?.['required']">
+              Choose any option
+            </span>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="NameOfestablish" style="margin-left:15px ; ">Name of establishment<span>*</span></label>
+              <select id="NameOfestablish" style="width: 300px; margin: 10px;" formControlName="nameOfEstablishment">
+                <option value="Jawahar Lal Nehru University">JLNU</option>
+                <option value="Hyderabad University">Hyderabad University</option>
+                <option value="Gitam University">Gitam University</option>
+              </select>
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['nameOfEstablishment'].touched ) && registerFormControl['nameOfEstablishment'].errors?.['required']">
+              Choose any option
+            </span>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="Discipline" style="margin-left:15px ; ">Discipline <span>*</span></label>
+              <select id="Discipline" style="width: 300px; margin: 10px;" formControlName="discipline">
+                <option value="Good">Good</option>
+                <option value="Satisfactory">Satisfactory</option>
+                <option value="Below satisfactory">Below Satisfactory</option>
+              </select>
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['discipline'].touched ) && registerFormControl['discipline'].errors?.['required']">
+              Choose any option
+            </span>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="breaks" style="margin-left:15px ;">Passing year</label>
+              <input type="text" style="width: 300px; margin: 10px; " formControlName=passingYear />
             </fieldset>
           </div>
 
-          <div class="col-md-2">
+          <div>
             <fieldset>
-              <label for="establishment" style="margin-left:15px ; margin-top: 10px;">Currency</label>
-              <select id="establishment" style="width: 200px; margin: 10px;" formControlName="currency">
-                <option value="INR">INR</option>
-                <option value="Dollar">Dollar</option>
-                <option value="Pound">Pound</option>
+              <label for="Grade" style="margin-left:15px ; ">Grade <span>*</span></label>
+              <select id="Grade" style="width: 300px; margin: 10px;" formControlName="grade">
+                <option value="O">O</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="registerFormControl['grade'].touched  && registerFormControl['grade'].invalid">
+              Choose any option
+            </span>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="Level" style="margin-left:15px ; ">Level</label>
+              <select id="Level" style="width: 300px; margin: 10px;" formControlName="level">
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+              </select>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="subject" style="margin-left:15px ;">Subject <span>*</span></label>
+              <select id="Level" style="width: 300px; margin: 10px;" formControlName="subject">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Web Development">Data Science</option>
+                <option value="Python">Data Structures</option>
+                <option value="Thermodynamics">Thermodynamics</option>
+              </select>
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['subject'].touched ) && registerFormControl['subject'].errors?.['required']">
+              Choose any option
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div>
+            <fieldset>
+              <label for="majorField" style="margin-left:15px ; margin-top: 10px;">Major field </label>
+              <select id="majorField" style="width: 300px; margin: 10px;" formControlName="majorField">
+                <option value="Btech">Btech</option>
+                <option value="Bcom">Bcom</option>
+                <option value="BSc">BSc</option>
+              </select>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="minorField" style="margin-left:15px;">Minor field</label>
+              <select id="minorField" style="width: 300px; margin: 10px;" formControlName="minorField">
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="ECE">ECE</option>
+                <option value="CIVIL">CIVIL</option>
+              </select>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="AffiliatedTo" style="margin-left:15px ; ">Affiliated To <span>*</span></label>
+              <select id="AffiliatedTo" style="width: 300px; margin: 10px;" formControlName="affiliation">
+                <option value="AICTE">AICTE</option>
+                <option value="JLNU">JLNU</option>
+                <option value="HU">HU</option>
+                <option value="KU">KU</option>
+                <option value="MGNU">MGNU</option>
+              </select>
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['affiliation'].touched ) && registerFormControl['affiliation'].errors?.['required']">
+              Choose any option
+            </span>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="Address" style="margin-left:15px ; ">Address of Institution </label>
+              <textarea id="Address" style="width: 300px; margin: 10px; min-height:10px;"
+                formControlName="addressOfInstitution"></textarea>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="AttendedFrom" style="margin-left:15px ; ">Attended From <span>*</span></label>
+              <input type="date" id="nameField" style="width: 300px; margin: 10px;" formControlName="attendedFrom">
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['attendedFrom'].touched ) && registerFormControl['attendedFrom'].errors?.['required']">
+              Input Required
+            </span>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="AttendedTo" style="margin-left:15px ; ">Attended To <span>*</span></label>
+              <input type="date" id="AttendedTo" style="width: 300px; margin: 10px;" formControlName="attendedTo">
+            </fieldset>
+            <span class="text-danger"
+              *ngIf="(registerFormControl['attendedTo'].touched ) && registerFormControl['attendedTo'].errors?.['required']">
+              Input Required
+            </span>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="sponsor" style="margin-left:15px ; ">Company sponsered </label>
+              <select id="sponsor" style="width: 300px; margin: 10px;" formControlName="companySponsored">
+                <option value="Wissen Technology">Wissen Technology</option>
+                <option value="Wissen Infotech">Wissen Infotech</option>
+                <option value="Capgemini">Capgemini</option>
               </select>
             </fieldset>
           </div>
         </div>
-        
 
-        
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset>
+                <label for="nameField" style="margin-left:15px ; margin-top: 10px; width: 50%;">Amount </label>
+                <input type="text" formControlName="amount" id="nameField" style="width: 50%; margin: 10px; ">
+              </fieldset>
+            </div>
 
-        <div>
-          <fieldset>
-            <label for="minorField" style="margin-left:15px ; ">Reinbursment Date</label>
-            <input type="date" id="nameField" style="width: 220px; margin: 10px; " required
-              formControlName="reimbursmentDate">
-          </fieldset>
+            <div class="col-md-6">
+              <fieldset>
+                <label for="establishment" style="margin-left:15px ; margin-top: 10px; width: 50%;">Currency </label>
+                <select id="establishment" style="width: 50%; margin: 10px; height: 27px;" formControlName="currency">
+                  <option value="INR">INR</option>
+                  <option value="Dollar">Dollar</option>
+                  <option value="Pound">Pound</option>
+                </select>
+              </fieldset>
+            </div>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="minorField" style="margin-left:15px ; ">Reinbursment Date </label>
+              <input type="date" id="nameField" style="width: 220px; margin: 10px; " formControlName="reimbursmentDate">
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="breaks" style="margin-left:15px ;">Explain Breaks during education </label>
+              <textarea rows="2" id="breaks" style="width: 220px; margin: 10px; min-height:10px;"
+                formControlName="breakExplaination"></textarea>
+            </fieldset>
+          </div>
+
+          <div>
+            <fieldset>
+              <label for="Address">Upload</label>
+              <input type="file" style="width: 200px; margin: 10px;" formControlName="upload" />
+            </fieldset>
+          </div>
+
         </div>
-
-        <div>
-          <fieldset>
-            <label for="breaks" style="margin-left:15px ;">Explain Breaks during education</label>
-            <textarea rows="2" id="breaks" style="width: 220px; margin: 10px; min-height:10px;"
-              formControlName="breakExplaination"></textarea>
-          </fieldset>
-        </div>
-
-        <div>
-          <fieldset>
-            <label for="Address" >upload</label>
-            <input type="file" style="width: 200px; margin: 10px;" formControlName="upload" />
-          </fieldset>
-        </div>
-
       </div>
     </div>
-    </div>
   </form>
+  <mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close color="warn">Cancel</button>
+    <button mat-button cdkFocusInitial (click)="postAndUpdateEducationDetails()"
+      color="primary" [disabled]="!addForm.valid">{{actionButton}}</button>
+  </mat-dialog-actions>
 </section>
-<mat-dialog-actions align="right">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button cdkFocusInitial (click)=" postAndUpdateEducationDetails()">{{actionButton}}</button>
-</mat-dialog-actions>

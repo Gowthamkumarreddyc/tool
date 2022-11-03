@@ -1,6 +1,28 @@
-.lower{
-    height: 50%;
-    width: 100%;
-    margin-top: 20px;
-    border: solid blue 1px;
-  }
+/* .lower {
+  height: 50%;
+  width: 100%;
+  margin-top: 20px;
+  border: solid blue 1px;
+} */
+
+span{
+  color: red;
+}
+
+.text-danger{
+  margin-left: 15px;
+}
+textarea.ng-touched.ng-invalid{
+  border: 1px solid red;
+}
+
+input.ng-touched.ng-invalid{
+  border: 1px solid red;
+}
+
+section{
+  overflow: auto;
+  height: 100vh;
+  width: auto;
+}
+

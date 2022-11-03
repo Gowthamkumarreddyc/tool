@@ -3,17 +3,10 @@ import { EmployeeService } from '../employee.service';
 @Component({
   selector: 'app-heder',
   templateUrl: './heder.component.html',
-  styleUrls: ['./heder.component.css']
+  styleUrls: ['./heder.component.css'],
 })
 export class HederComponent implements OnInit {
+  constructor() {}
 
-// showFiller = false;
-
-  constructor( ) { }
-
-  ngOnInit(): void {
-    
-  }
-
-
+  ngOnInit(): void {}
 }

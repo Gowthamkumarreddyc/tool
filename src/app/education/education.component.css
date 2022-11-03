@@ -1,10 +1,20 @@
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    padding: 5px;
-  }
-  .container{
-    width: 100%;
-    height: auto;
-  }
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 5px;
+}
+.container {
+  width: 100%;
+  height: auto;
+}
+table, tr , td,th{
+  text-align: center;
+}
+td,th{
+  width: 15%;
+}
+
+td,th:nth-child(1){
+  width: 12%;
+}

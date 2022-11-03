@@ -1,0 +1,20 @@
+span {
+  color: red;
+}
+
+.text-danger {
+  margin-left: 15px;
+}
+
+select.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+section {
+  overflow: auto;
+  height: 100vh;
+  width: auto;
+}
